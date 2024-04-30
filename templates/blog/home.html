@@ -23,13 +23,14 @@
 </style>
 
 <div class="container my-4">
-    {% for post in allPosts %}
+    
     <div class="card my-4">
         <div class="card-body">
+            <img width="200vw" src="media/{{post.thumbnail}}" class="img-fluid mb-1">
             <h5 class="card-title">{{post.title}}     -by {{post.author}}</h5>
             <p class="card-text">{{ post.timeStamp }}</p>
             <hr class="solid">
-            <p class="card-text">{{post.text | truncatechars:500}}</p>
+            <p class="card-text">{{post.text | truncatechars:200}}</p>
             <a href="/blog/{{post.slug}}" class="btn btn-primary">Continue Reading</a>
         </div>
     </div>
