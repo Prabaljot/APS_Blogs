@@ -3,9 +3,6 @@ from .models import Post, BlogComment
 from django.contrib import messages
 from Blog.templatetags import extras
 
-# Create your views here.
-
-
 def blogHome(request):
     allPosts = Post.objects.all()
     context = {
